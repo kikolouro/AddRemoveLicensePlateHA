@@ -1,0 +1,12 @@
+version: "3.2"
+services: 
+    plateadder:
+        build: 
+          context: '.'
+        container_name: plateadder
+        volumes: 
+          - ./:/app
+          - /home/servicedesk/cert:/certs
+        restart: always
+        ports: 
+          - "443:5000"
